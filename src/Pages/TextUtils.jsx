@@ -90,6 +90,7 @@ export default function TextUtils(props) {
             }`}
           >
             <h1 className="font-bold text-2xl">Enter text to analyze below</h1>
+            <p>Ill add anything here</p>
             <textarea
               name=""
               id="tarea"
