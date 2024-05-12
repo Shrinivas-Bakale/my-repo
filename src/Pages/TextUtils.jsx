@@ -142,7 +142,7 @@ export default function TextUtils(props) {
               <h2 className="font-semibold text-xl">Your Text Summary</h2>
               <p>
                 {" "}
-                {text.split(" ").length} Words and {text.length} Characters
+                {text.split(" ").filter((element)=>{return element.length!=0}).length} Words and {text.length} Characters
               </p>
             </div>
 
