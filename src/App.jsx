@@ -8,17 +8,20 @@ import Navbar from "./Pages/Navbar";
 // import Timeline from "./Pages/Timeline"
 
 function App() {
-  const [mode, setMode] = useState("gray-900");
+  const [mode, setMode] = useState("gray-500");
+  const [mtext, setMtext] = useState("Enable Dark Mode")
 
-  const toggleMode = () => {
+  const toggleMode = () => { 
     if (mode === "gray-900") {
       setMode("gray-500");
       document.body.style.backgroundColor = "white";
       showAlert("Light mode has been enabled");
+      setMtext("Enable Dark Mode")
     } else {
       setMode("gray-900");
       document.body.style.backgroundColor = "black";
       showAlert("Dark mode has been enabled");
+      setMtext("Enable Light Mode")
     }
   };
 
@@ -31,7 +34,7 @@ function App() {
   return (
     <>
       <Router>
-      <Navbar mode={mode} toggleMode={toggleMode} />
+      <Navbar mode={mode} toggleMode={toggleMode} mtext={mtext} />
         <Routes>
           <Route
             exact path="/"
